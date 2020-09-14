@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  host: localhost
+  database: no_database
+  username: root
+  password:
+  preconnect: true
+
+development:
+  <<: *default
+  database: shortify_dev
+
+test:
+  <<: *default
+  database: shortify_test
+
+production:
+  <<: *default
+  database: shortify
